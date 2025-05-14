@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -9,11 +9,6 @@ const fadeBottom = {
     y: 0,
     opacity: 1,
   },
-};
-
-const slideLeft = {
-  out: { x: -50, opacity: 0 },
-  in: { x: 0, opacity: 1 },
 };
 
 const scaleIn = {
@@ -37,7 +32,7 @@ const HeroSection = () => {
     ]);
 
     return () => control.stop();
-  }, []);
+  }, [animate]);
 
   return (
     <section ref={scope} className={cn("hero revert p-8 md:px-24 relative")}>

@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-import { Loader2, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { stagger, useAnimate, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
-import { MotionCheck, MotionX } from "../icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -17,11 +16,6 @@ import {
 } from "../ui/form";
 import { Textarea } from "../ui/textarea";
 import { Input } from "../ui/input";
-
-const formAnimation = {
-  initial: { x: 30, opacity: 0 },
-  whileInView: { x: 0, opacity: 1 },
-};
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -51,9 +45,9 @@ const ContactSection = () => {
     }
   }, [isInView]);
 
-  const handleFormSubmit: SubmitHandler<z.infer<typeof formSchema>> = async (
-    values
-  ) => {};
+  const handleFormSubmit: SubmitHandler<
+    z.infer<typeof formSchema>
+  > = async () => {};
 
   return (
     <section id="contact" className="bg-neutral-100">

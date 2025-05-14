@@ -1,13 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Clock5, FileX, Rocket, SquareCheckBig, Users } from "lucide-react";
-import {
-  motion,
-  useAnimate,
-  useMotionValue,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { motion, useAnimate, useScroll, useTransform } from "motion/react";
 
 const list = [
   {
@@ -89,7 +83,7 @@ const list = [
 ];
 
 const ProgramDynamics = () => {
-  const [scope, animate] = useAnimate();
+  const [scope] = useAnimate();
   const scrollHalf = useScroll({
     target: scope,
     offset: ["start end", "end end"],
@@ -103,11 +97,6 @@ const ProgramDynamics = () => {
     scrollHalf.scrollYProgress,
     [0.5, 0.8],
     ["-50%", "0%"]
-  );
-  const glassSlide = useTransform(
-    scrollHalf.scrollYProgress,
-    [0.4, 0.8],
-    ["0%", "33%"]
   );
 
   return (

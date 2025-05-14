@@ -43,7 +43,7 @@ const Newsletter = () => {
       await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulated API call
       setSubmitStatus({ status: "success" });
       form.reset();
-    } catch (error) {
+    } catch {
       setSubmitStatus({ status: "error" });
     }
   };

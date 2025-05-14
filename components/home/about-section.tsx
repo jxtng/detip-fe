@@ -217,11 +217,11 @@ const partners = [
           At PINEAPP Solutions Limited, our mission is to empower businesses
           through innovative software solutions that enhance productivity,
           streamline operations, and foster growth. We are dedicated to
-          understanding our clients' unique challenges and delivering tailored
-          software products that exceed their expectations. With a focus on
-          excellence, integrity, and long-term partnerships, we aim to be a
-          trusted advisor and a catalyst for our clients' success in an
-          ever-evolving digital landscape
+          understanding our clients&apos; unique challenges and delivering
+          tailored software products that exceed their expectations. With a
+          focus on excellence, integrity, and long-term partnerships, we aim to
+          be a trusted advisor and a catalyst for our clients&apos; success in
+          an ever-evolving digital landscape
         </p>
       </>
     ),

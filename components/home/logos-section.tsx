@@ -12,7 +12,7 @@ interface Logo {
 }
 
 const LogosSection = () => {
-  const [logos, setLogos] = useState<(Logo | Logo[])[]>([
+  const [logos] = useState<(Logo | Logo[])[]>([
     {
       src: "/logos/skillonline.svg",
       alt: "SkillOnline Logo",
@@ -62,19 +62,9 @@ const LogosSection = () => {
         viewport={{ amount: 1, once: true, margin: "-60px 0px" }}
         className="logos-wrapper flex flex-wrap gap-4 items-center justify-center md:justify-between"
       >
-        {logos.map((item, index) => {
+        {logos.map((item) => {
           return (
             <Fragment key={Array.isArray(item) ? item[0].src : item.src}>
-              {/* Divider */}
-              {/* {index !== 0 && (
-                <motion.div
-                  variants={{
-                    initial: { opacity: 0 },
-                    whileInView: { opacity: 1 },
-                  }}
-                  className="divider w-0.5 h-8 shrink-0 bg-primary/50"
-                />
-              )} */}
               {Array.isArray(item) ? (
                 <div className="flex gap-2">
                   {item.map((logo) => (
