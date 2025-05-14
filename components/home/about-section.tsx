@@ -237,7 +237,7 @@ const AboutSection = () => {
   return (
     <section id="about">
       <h2 className="mb-6 text-center text-primary">About our Partners</h2>
-      <div className="container flex gap-4 md:gap-8">
+      <div className="container flex max-md:flex-col-reverse gap-4 md:gap-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={partner?.name}
@@ -257,24 +257,21 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-        <nav className="basis-1/2">
-          <ul className="flex md:flex-col flex-wraps justify-center gap-2 md:gap-4">
-            {partners.map((partner) => (
-              <motion.li
-                key={partner.name}
-                onClick={() => setselectedPartner(partner.name)}
-                className={cn(
-                  "font-bold text-primary text-base cursor-pointer border-b-4 md:border-b-0 md:border-l-4 border-transparent px-2 py-6 transition-all",
-                  partner.name === selectedPartner &&
-                    "border-primary bg-neutral-200 rounded-e-md"
-                )}
-                layout
-              >
-                {partner.name}
-              </motion.li>
-            ))}
-          </ul>
-        </nav>
+        <ul className="nav basis-1/2 flex md:flex-col md:justify-center overflow-auto gap-2 md:gap-4">
+          {partners.map((partner) => (
+            <li
+              key={partner.name}
+              onClick={() => setselectedPartner(partner.name)}
+              className={cn(
+                "font-bold text-primary text-base cursor-pointer border-b-4 md:border-b-0 md:border-l-4 border-transparent px-2 py-6 transition-all",
+                partner.name === selectedPartner &&
+                  "border-primary bg-neutral-200 rounded-e-md"
+              )}
+            >
+              {partner.name}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

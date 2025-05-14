@@ -29,7 +29,7 @@ const OurCoursesSection = () => {
           Our Courses
         </motion.h2>
 
-        <div className="flex flex-wrap justify-center *:shrink-0 gap-12">
+        <div className="flex md:flex-wrap overflow-scroll justify-center *:shrink-0 gap-12">
           {courses.map((course, index) => (
             <CourseCard key={course.name + index} {...(course as Course)} />
           ))}
@@ -47,14 +47,14 @@ const CourseCard: React.FC<Course> = ({ name, description, src, alt, id }) => {
         whileInView: { y: 0, opacity: 1 },
       }}
       transition={{ duration: 0.3 }}
-      className="card shadow-md p-4 rounded-xl text-sm bg-neutral-100 w-fit basis-2/5 flex gap-4"
+      className="card shadow-md p-4 rounded-xl text-sm bg-neutral-100 w-fit basis-2/5 flex max-md:flex-col gap-4"
     >
       <img
         src={src}
         alt={alt || `${name} image`}
-        className="rounded-xl object-cover w-24"
+        className="rounded-xl object-cover md:w-24"
       />
-      <div>
+      <div className="grow flex flex-col">
         <div className="info">
           <h3 className="capitalize">{name}</h3>
           <p className="description ">{description}</p>
