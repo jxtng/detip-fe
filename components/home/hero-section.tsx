@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const fadeBottom = {
   out: { y: 50, opacity: 0 },
@@ -15,6 +16,8 @@ const scaleIn = {
   out: { scale: 0.3, opacity: 0 },
   in: { scale: 1, opacity: 1 },
 };
+
+const MotionImage = motion.create(Image);
 
 const HeroSection = () => {
   const [scope, animate] = useAnimate();
@@ -105,10 +108,12 @@ const HeroSection = () => {
             }}
             className="backdrop w-full h-full"
           />
-          <motion.img
+          <MotionImage
             initial={scaleIn.out}
             src="/images/hero-image.png"
             alt="Image of an AI generated brain"
+            width={2500}
+            height={2500}
             className="hero-img relative z-10"
           />
         </motion.div>
