@@ -43,7 +43,7 @@ const ContactSection = () => {
         { duration: 0.3, delay: stagger(0.1) }
       );
     }
-  }, [isInView]);
+  }, [isInView, animate]);
 
   const handleFormSubmit: SubmitHandler<
     z.infer<typeof formSchema>

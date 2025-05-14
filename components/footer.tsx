@@ -31,7 +31,7 @@ const socialLinks = [
         />
       </svg>
     ),
-    href: "https://www.facebook.com/profile.php?id=61570505078013&__cft__[0]=AZVjCPh6TmlSi1QYVeluaz89rOCJvrhDOLVCnsFCCOD7ExSkXvcp9q6lcMzgHXurPEsz8EcgJoUzRI0KlM20kFfC52L0hbmWA30nPh_ubrHWMtA_r9COX2dODZyYlk3YGqjNct43iRRQFR3HzTH5eckRnroAxLq9M4R2kusP1vLhlZIbzvj8h7He3JQx_7Y53I6c4zixxaGoy8e6zoCN8GK5&__tn__=-]C%2CP-R",
+    href: "#",
   },
   {
     name: "x",
@@ -49,7 +49,7 @@ const socialLinks = [
         />
       </svg>
     ),
-    href: "https://x.com/etsap_tech?s=11",
+    href: "#",
   },
   {
     name: "instagram",
@@ -67,7 +67,7 @@ const socialLinks = [
         />
       </svg>
     ),
-    href: "https://www.instagram.com/etsap_techs",
+    href: "#",
   },
   {
     name: "tiktok",
@@ -85,7 +85,7 @@ const socialLinks = [
         ></path>
       </svg>
     ),
-    href: "https://www.tiktok.com/@etsap_techs",
+    href: "#",
   },
   {
     name: "Discord",
@@ -102,7 +102,7 @@ const socialLinks = [
         ></path>
       </svg>
     ),
-    href: "https://discord.gg/Jqmb2Ga9pE",
+    href: "#",
   },
   {
     name: "linkedin",

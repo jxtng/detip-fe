@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar";
 import HeroSection from "@/components/home/hero-section";
 import LogosSection from "@/components/home/logos-section";
 import OurGoalSection from "@/components/home/our-goal-section";
@@ -13,7 +12,6 @@ import Footer from "@/components/footer";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <LogosSection />
       <OurGoalSection />
